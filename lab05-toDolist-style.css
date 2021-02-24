@@ -1,0 +1,15 @@
+#box {
+    height: 40px;
+    width: 400px;
+    background-color: blue;
+    text-align: center;
+}
+#head{
+    color:white;
+    padding:5px;
+    text-align: center;
+}
+#input{
+    height: 20px;
+    width: 392px;
+}
