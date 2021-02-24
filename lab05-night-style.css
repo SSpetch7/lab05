@@ -6,14 +6,14 @@
     background-color: black;
 }
 
-#text-day{
+.text-day{
     color: red;
 }
-#text-night{
+.text-night{
     color: blue;
 }
 
-.atDay{
+ .atDay{
     color: black;
 }
 .atNight{
