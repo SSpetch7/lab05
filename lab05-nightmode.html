@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lab05-night-style.css"> 
-    <script scr="lab05-night-js.js" defer></script>
+    <script src="lab05-night-js.js" defer></script>
     <title>Night mode</title>
 </head>
 <body>
-    <div class='day'>
-        <h1 class="Hi-day">GOOD MORNING</h1>
-        <h3 class="day">This is day time!</h3>
-        <p>This <span class="text-day">word</span> will be red in day and blue in night.</p>
-        <p>Click the button below to activate the night mode.</p>
-        <button type="button">Activate the night mode</button>
-    </div>
+        <div class="day" id="time">
+            <h1 class="Hi-day" class="atDay">GOOD MORNING</h1>
+            <h3 class="daytime" class="atDay">This is day time!</h3>
+            <p class="atDay">This <span id="text-day">word</span> will be red in day and blue in night.</p>
+            <p class="atDay">Click the button below to activate the night mode.</p>
+            <button type="button" id="button">Activate the night mode</button>
+        </div>
 </body>
 </html>

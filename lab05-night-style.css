@@ -6,9 +6,16 @@
     background-color: black;
 }
 
-.text-day{
+#text-day{
     color: red;
 }
-.text-night{
+#text-night{
     color: blue;
+}
+
+.atDay{
+    color: black;
+}
+.atNight{
+    color:azure;
 }
