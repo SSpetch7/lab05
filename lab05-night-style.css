@@ -1,0 +1,14 @@
+.day{
+    background-color: white;
+}
+
+.night{
+    background-color: black;
+}
+
+.text-day{
+    color: red;
+}
+.text-night{
+    color: blue;
+}
