@@ -1,15 +1,58 @@
-#box {
-    height: 40px;
-    width: 400px;
-    background-color: blue;
-    text-align: center;
+.container{
+    padding:10px;
+    width:380px;
+    margin:0 auto;
 }
 #head{
-    color:white;
-    padding:5px;
+    width: 280px;
+    height: 40px;
+    background-color: red;
     text-align: center;
+    padding-top: 15px;
 }
-#input{
-    height: 20px;
-    width: 392px;
+.header {
+    display: inline;
+    font-size: 20px;
 }
+
+#input {
+    width: 272px;
+    height: 25px;
+}
+
+
+.board{
+    width:280px;
+    height: 350px;
+    background-color: #FFF;
+    overflow: auto;
+}
+.board::-webkit-scrollbar { 
+    display: none; 
+}
+.board ul{
+    padding:0;
+    margin:0;
+}
+
+.item{
+    padding: 10px;
+    width:280px;
+    height: 25px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+}
+.item i.delete:hover{
+    color: red;
+    cursor: pointer;
+}
+.item p.text{
+    display: inline;
+    padding:5px;
+    margin-top: 10px;
+}
+.item p.text:hover{
+    color: yellow;
+    cursor: pointer;
+}
+

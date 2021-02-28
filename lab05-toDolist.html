@@ -11,15 +11,21 @@
 </head>
 <body>
     <div class='container'>
-        <div class='todo'>
-            <input type="text" id='input' placeholder='Add to do'>
+        <div id='head'>
+            <h1 class='header'>To-DO LIST</h1>
+            <i class="fas fa-plus-circle add"></i>
         </div>
-        <ul id='list'>
-            <i class="far fa-circle" job="complete" id='0'></i>
-            <p class="text">do homework</p>
-            <i class="fas fa-trash" job="delete" id="0"></i>
-            
-        </ul>
+        <div class='todo'>
+            <input type="text" id='input' placeholder='Add new to do'>
+        </div>
+        <div class ="board">
+            <ul id='list'>
+                <li class='item'>
+                    <i class="fas fa-trash delete" job="delete" id="0"></i>
+                    <p class="text">do homework</p>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
