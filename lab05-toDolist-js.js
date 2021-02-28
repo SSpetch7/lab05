@@ -1,37 +1,67 @@
-var mylist = document.getElementById('li');
-var i; 
-for (i=0;i < mylist.length;i++){
+var mylist = document.getElementsByTagName('LI');
+for (var i=0;i<mylist.length;i++){
     var trash = document.createElement('i');
-    var text = document.createTextNode('\u007D');
     trash.className ='fas fa-trash delete';
-    trash.appendChild(text);
     mylist[i].appendChild(trash);
 }
-var remove = document.getElementsByClassName('delete');
-var i;
-for(i=0;i<remove.length;i++){
-    remove[i].onclick =function(){
-        var div = this.parentElement;
-        div.style.display = "none";
+
+function completelist(element){
+    if(ONCLICK == true){
+        element.classList.add('completed');
+        ONCLICK = false;
     }
+    else if (ONCLICK == false){
+        element.classList.remove('completed');
+        ONCLICK = true;
+    }
+    console.log(element);
 }
 
-var list = document.querySelector('#list');
-list.addEventListener('click',function(event){
-    if(event.target.tagName === 'li'){
-        event.target.classList.toggle('checked');
+function removelist(element){
+    element.parentNode.parentNode.removeChild(element.parentNode);
+}
+
+var ONCLICK = true;
+const listA = document.querySelector('#list');
+listA.addEventListener('click',function(event){
+    const element = event.target;
+    const elementw = event.target.className;
+    if(elementw == 'fas fa-trash delete'){
+        removelist(element);
     }
-},false)
+    else if(elementw == 'text'){
+        completelist(element);
+    }
+});
 
 function newNode(){
     var li = document.createElement('li');
-    var inputValue = document.getElementById('input')
+    li.className = 'item';
+    var inputValue = document.getElementById('input').value;
+    var text = document.createTextNode(inputValue);
+    if(inputValue===''){}
+    else{
+        document.getElementById('list').appendChild(li);
+    }
+    document.getElementById('input').value='';
+    var trash = document.createElement('i');
+    var txt = document.createElement('p');
+    txt.appendChild(text);
+    trash.className = 'fas fa-trash delete';
+    txt.className = 'text';
+    li.appendChild(trash);
+    li.appendChild(txt);
+    for(var i=0;i<trash.length;i++){
+        trash[i].onclick=function(){
+            var div =this.parentElement;
+            div.style.display='none';
+        }
+    }
 }
-const list = document.getElementById('list');
 const todo = document.getElementById('input');
 todo.addEventListener('keyup',function(event){
     if(event.keyCode == 13){
-        const toDo = input.value;
-        
+       newNode();
+
     }
 })
