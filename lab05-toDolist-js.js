@@ -20,8 +20,6 @@ function removelist(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
 }
 
-
-
 var ONCLICK = true;
 const listA = document.querySelector('#list');
 listA.addEventListener('click',function(event){
@@ -53,12 +51,6 @@ function newNode(){
     txt.className = 'text';
     li.appendChild(trash);
     li.appendChild(txt);
-    for(var i=0;i<trash.length;i++){
-        trash[i].onclick=function(){
-            var div =this.parentElement;
-            div.style.display='none';
-        }
-    }
 }
 const todo = document.getElementById('input');
 todo.addEventListener('keyup',function(event){
