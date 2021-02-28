@@ -6,30 +6,32 @@ for (var i=0;i<mylist.length;i++){
 }
 
 function completelist(element){
-    if(ONCLICK == true){
+    if(ONCLICK === true){
         element.classList.add('completed');
         ONCLICK = false;
     }
-    else if (ONCLICK == false){
+    else if (ONCLICK === false){
         element.classList.remove('completed');
         ONCLICK = true;
     }
-    console.log(element);
 }
 
 function removelist(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
 }
 
+
+
 var ONCLICK = true;
 const listA = document.querySelector('#list');
 listA.addEventListener('click',function(event){
+    console.log(event);
     const element = event.target;
     const elementw = event.target.className;
     if(elementw == 'fas fa-trash delete'){
         removelist(element);
     }
-    else if(elementw == 'text'){
+    else if(elementw == 'text'|| 'text completed'){
         completelist(element);
     }
 });

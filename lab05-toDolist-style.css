@@ -6,7 +6,7 @@
 #head{
     width: 280px;
     height: 40px;
-    background-color: red;
+    background-color:cornflowerblue;
     text-align: center;
     padding-top: 15px;
 }
@@ -52,7 +52,7 @@
     margin-top: 10px;
 }
 .item p.text:hover{
-    color: yellow;
+    color:aqua;
     cursor: pointer;
 }
 .completed{
