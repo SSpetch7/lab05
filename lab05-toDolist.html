@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lab05-toDolist-style.css">
     <script src="lab05-toDolist-js.js" defer></script>
+    <link rel='stylesheet'href="fontawesome-free-5.15.2-web/css/all.css">
     <title>To Do list</title>
 </head>
 <body>
-    <div id="box">
-        <h2 id="head">To-Do list</h2>
+    <div class='container'>
+        <div class='todo'>
+            <input type="text" id='input' placeholder='Add to do'>
+        </div>
+        <ul id='list'>
+            <i class="far fa-circle" job="complete" id='0'></i>
+            <p class="text">do homework</p>
+            <i class="fas fa-trash" job="delete" id="0"></i>
+            
+        </ul>
     </div>
-    <input type="text" id="input" placeholder="Add new todo">
-    <ul id="Mylist"></ul>
 </body>
 </html>
